@@ -10,5 +10,5 @@ alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn
 
 alias glnc='git log --pretty=format:"%h\\ %s\\ [%cn]"'
 
-export PS1="\[\033[36m\]\u\[\033[m\]@\e[31mRed\h:\[\033[32m\] \[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$  \n| => "
-export PS2="| => "
+export PS1="\[\033[36m\]\u\[\033[m\]@\e[31m\h:\[\033[32m\] \[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \n$ "
+export PS2="$ "
