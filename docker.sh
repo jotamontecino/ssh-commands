@@ -1,2 +1,4 @@
 alias figup='docker-compose up'
-alias figd='docker-compose up -d'
+alias figud='docker-compose up -d'
+
+alias drmi='docker rmi $*'
