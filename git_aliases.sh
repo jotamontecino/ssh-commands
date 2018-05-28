@@ -1,5 +1,7 @@
-alias gci='git commit -m $1'
-alias gad='git add $*'
+
+alias go='git checkout $*'
+alias gc='git commit -m $1'
+alias ga='git add $*'
 alias gst='git status'
 
 # Beaux logs en liste
