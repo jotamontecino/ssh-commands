@@ -53,3 +53,10 @@ echo "for file in ~/.bash_folder/*.sh" > ~/.bash_aliases
 echo "do" >> ~/.bash_aliases
 echo '    . $file' >> ~/.bash_aliases
 echo "done" >> ~/.bash_aliases
+
+# Chargement de l'auto completion pour docker
+sudo curl https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker -o /etc/bash_completion.d/docker.sh
+sudo curl -L https://raw.githubusercontent.com/docker/compose/1.21.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+# Changement de droits (non root) pour Docker 
+sudo groupadd docker
+sudo usermod -aG docker $USER
