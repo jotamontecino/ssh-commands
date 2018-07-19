@@ -46,3 +46,10 @@ sudo npm install -g npm
 # copie du git de raccourci
 
 git clone https://github.com/jotamontecino/ssh-commands.git ~/.bash_aliases
+
+# Création du fichier de loading des raccourcis
+touch ~/.bash_aliases
+echo "for file in ~/.bash_folder/*.sh" > ~/.bash_aliases
+echo "do" >> ~/.bash_aliases
+echo '    . $file' >> ~/.bash_aliases
+echo "done" >> ~/.bash_aliases
