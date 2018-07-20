@@ -1,6 +1,7 @@
 alias gci='git commit -m $1'
-alias gad='git add $*'
+alias ga='git add'
 alias gst='git status'
+alias gpu='git push'
 
 # Beaux logs en liste
 alias gls='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
