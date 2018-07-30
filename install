@@ -57,6 +57,13 @@ echo "done" >> ~/.bash_aliases
 # Chargement de l'auto completion pour docker
 sudo curl https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker -o /etc/bash_completion.d/docker.sh
 sudo curl -L https://raw.githubusercontent.com/docker/compose/1.21.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
-# Changement de droits (non root) pour Docker 
+# Changement de droits (non root) pour Docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+# Install Ngrok
+sudo curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -o ngrok.zip
+sudo mkdir -p /opt/ngork
+sudo unzip ngrok.zip -d /opt/ngrok
+sudo ln -s /opt/ngrok/ngrok /usr/bin/ngrok
+sudo rm -f ngrok.zip
