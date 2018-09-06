@@ -1,13 +1,24 @@
+## Docker-compose aliases
 alias figup='docker-compose up'
 alias figud='docker-compose up -d'
+alias figdw='docker-compose down'
+alias figo='docker-compose start'
+alias figstp='docker-compose stop'
+##
+alias dclog="docker-compose logs"
+alias dclogf="docker-compose logs -f"
+
+
 #########################################
 # Containers
 alias dl="docker ps -l -q"
 alias dps="docker ps"
 alias dpa="docker ps -a"
+alias dpnames="docker ps --format \"{{.Names}}\""
+
 
 # Exec
-alias dsh='docker exec -it $1 bash'
+alias dsh='docker exec -it "$1" bash'
 alias dexec='docker exec -it'
 
 #Stops

@@ -14,3 +14,12 @@ alias glnc='git log --pretty=format:"%h\\ %s\\ [%cn]"'
 
 export PS1="\[\033[36m\]\u\[\033[m\]@\e[31m\h:\[\033[32m\] \[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \n$ "
 export PS2="$ "
+
+#
+# ## Config auto bash_completion
+# complete -F _git_checkout go
+
+# __git_complete g __git_main
+# __git_complete go _git_checkout
+# __git_complete gm __git_merge
+# __git_complete gp _git_pull
