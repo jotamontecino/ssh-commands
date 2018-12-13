@@ -33,3 +33,7 @@ alias reboot='sudo /sbin/reboot'
 alias poweroff='sudo /sbin/poweroff'
 alias halt='sudo /sbin/halt'
 alias shutdown='sudo /sbin/shutdown'
+
+# Alias ll
+alias ll='ls -lF'
+alias lla='ls -alF'
