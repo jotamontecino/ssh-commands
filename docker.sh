@@ -30,5 +30,6 @@ alias drmfa='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias di="docker images"
 alias drmi='docker rmi $*'
 drmia() { docker rmi $(docker images -q); }
+alias drminone='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
